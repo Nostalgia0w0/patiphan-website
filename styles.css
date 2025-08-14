@@ -1,0 +1,156 @@
+/* พื้นหลังหน้าเว็บ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #08070e, #2e0f4b);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* การ์ดตรงกลาง */
+.card {
+    background-color: rgba(15, 8, 30, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    padding: 30px;
+    max-width: 500px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+
+/* อนิเมชั่นเลื่อนขึ้น */
+.animate-up {
+    animation: slideUp 1s ease forwards;
+    cursor: pointer;
+}
+
+
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* หัวข้อ */
+.card-title {
+    font-size: 2.6em;
+    margin-bottom: 20px;
+    color: #a78bfa;
+}
+
+.card-image {
+    border-radius: 10%;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 12px 40px rgba(139,92,246,0.8);
+}
+
+/* รูปโปรไฟล์ มีกรอบ */
+.profile {
+    border-radius: 50%;
+    border: 3px solid #8b5cf6;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-width 0.3 ease;
+}
+
+.profile:hover {
+    transform: scale(1.2);
+    border-width: 8px;
+    box-shadow: 0 0 25px #a78bfa, 0 0 50px #8b5cf6;
+}
+
+/* ข้อความ */
+.card-text {
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    color: #d3d3ff;
+}
+
+/* ตารางข้อมูลส่วนตัว */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(20, 10, 40, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.profile-table th, .profile-table td {
+    padding: 12px 15px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 1.4em;
+}
+
+
+.profile-table th {
+    background-color: #8b5cf6;
+    font-size: 1.7em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.profile-table tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* กล่องสุ่มตัวเลข */
+.rbox {
+    background-color: rgba(20, 10, 40, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    margin-left: 50px;
+    margin-top: 40px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 1s ease forwards;
+}
+
+/* hover effect ของกล่อง */
+.rbox:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(139,92,246,0.8);
+}
+
+/* ปุ่ม */
+.rbox button {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover ปุ่ม */
+.rbox button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #a78bfa, 0 0 30px #8b5cf6;
+}
+
+/* ตัวเลขแสดงผล */
+#num {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #a78bfa;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
