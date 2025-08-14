@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card animate-up">
+        <h1 class="card-title">หน้าแนะนำตัวของฉัน</h1>
+        <img class="card-image" src="my_photo.jpg" alt="my-photo" width="200px">
+        <p class="card-text">สวัสดีครับ นี่คือหน้าเว็บไซต์ของผม</p>
+        <table class="profile-table" border="1">
+            <thead>
+                <tr>
+                    <th colspan="2">ข้อมูลส่วนตัว</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>รหัสประจำตัว</td>
+                    <td>683380302-9</td>
+                </tr>
+                <tr>
+                    <td>ชื่อ</td>
+                    <td>ปฏิภาณ น้ำจันทร์</td>
+                </tr>
+                <tr>
+                    <td>อีเมล</td>
+                    <td>patiphan.nam@kkumail.com</td>
+                </tr>
+                <tr>
+                    <td>ความสนใจ</td>
+                    <td>Cyber security, Fullstack developer</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="rbox">
+        <button onclick="start_random()">กดเพื่อสุ่มตัวเลข 6 หลัก</button>
+        <div id="num">------</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
